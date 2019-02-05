@@ -1,7 +1,7 @@
 import re,sys
 from bs4 import BeautifulSoup
 
-def search(search_n):
+def scrape(search_n):
     re_sub = re.compile(r'[︰-＠]')  #全角記号
     re_space = re.compile(r'[　 +]')    #全半空白
     search_n = re_space.sub('',search_n)
@@ -22,4 +22,4 @@ def search(search_n):
 
 if __name__ == "__main__":
     name = sys.argv[1]
-    search(name)
+    scrape(name)
